@@ -1,0 +1,196 @@
+html, body {
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+/* Basic reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;     /* adjust size as needed */
+  font-weight: bold;
+  color: #333;           /* or your preferred color */
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+
+.nav a.active {
+  color: #FFE031;
+}
+
+.career-main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #FFE031;
+  border-bottom: 2px solid #FFE031;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.dates {
+  font-weight: 600;
+  color: #999;
+  margin-left: 10px;
+  font-style: italic;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation-name: fadeInUp;
+  animation-fill-mode: forwards;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-out;
+}
+
+
+/* vertical line */
+
+.timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto;
+  padding-left: 40px; /* space for timeline */
+}
+
+/* The yellow animated line */
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;              /* thick yellow line */
+  background-color: #FFE031;
+  height: 0;               /* starts at zero height */
+  animation: growLine 3s forwards ease-out;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+/* Make sure timeline sections appear above line */
+.timeline-section {
+  position: relative;
+  z-index: 2;
+}
+
+/* The fadeInUp animation stays same */
+
+/* New animation to grow the yellow line downward */
+@keyframes growLine {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+
+/* Dots on the timeline */
+.timeline-section ul li {
+  position: relative;
+  padding-left: 30px; /* spacing between dot and text */
+  margin-bottom: 40px;
+}
+
+/* Small yellow circle */
+.timeline-section ul li::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -48px; /* aligns with the black/yellow line */
+  width: 14px;
+  height: 14px;
+  background-color: #000000;
+  border: 4px solid #fff; /* optional white border for contrast */
+  border-radius: 50%;
+  z-index: 3;
+  box-shadow: 0 0 0 2px black; /* helps it stand out on light background */
+  opacity: 0;
+  animation: dotFadeIn 0.5s forwards ease;
+}
+
+/* Delay dots to appear with each li */
+.timeline-section ul li:nth-child(1)::before { animation-delay: 0.3s; }
+.timeline-section ul li:nth-child(2)::before { animation-delay: 0.8s; }
+.timeline-section ul li:nth-child(3)::before { animation-delay: 1.3s; }
+.timeline-section ul li:nth-child(4)::before { animation-delay: 1.8s; }
+
+@keyframes dotFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* Footer */
+.footer {
+  padding: 30px;
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+}

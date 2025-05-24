@@ -1,0 +1,108 @@
+/* Basic layout */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;     /* adjust size as needed */
+  font-weight: bold;
+  color: #333;           /* or your preferred color */
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+
+.nav a.active {
+  color: #FFE031;
+}
+
+.skills-main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+/* Directory Tree */
+.directory-tree,
+.directory-tree ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.directory-tree li {
+  margin: 6px 0;
+  padding-left: 24px;
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
+
+/* Carets */
+.caret {
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+  width: 1em;
+  transition: transform 0.3s ease;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.caret-down {
+  transform: rotate(90deg);
+}
+
+/* Folder & file icons */
+.folder-icon {
+  margin-right: 6px;
+}
+
+.file-icon {
+  margin-right: 6px;
+  margin-left: 22px; /* indent files */
+}
+
+/* Initially collapsed */
+.nested {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease;
+}
+
+/* When folder is opened */
+.nested.active {
+  max-height: 1000px; /* Large enough to show all items */
+}
+
+
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+}

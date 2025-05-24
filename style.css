@@ -1,0 +1,165 @@
+/* ------------------- Global Styles ------------------- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #ffffff);
+  color: #333;
+}
+
+/* ------------------- Header ------------------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  align-items: center;
+}
+
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;     /* adjust size as needed */
+  font-weight: bold;
+  color: #333;           /* or your preferred color */
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+
+.nav a.active {
+  color: #FFE031;  /* fixed double # typo */
+}
+
+/* ------------------- Main Content ------------------- */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* ------------------- Desktop Styles ------------------- */
+@media (min-width: 768px) {
+  .main {
+    flex-direction: row;
+    justify-content: center;      /* center horizontally */
+    align-items: center;          /* center vertically */
+    gap: 130px;                   /* space between text and image */
+    text-align: left;
+    margin-top: 15px;             /* gap from top */
+  }
+
+  /* Increase profile image size on desktop */
+  .profile-img img {
+    width: 400px;   /* bigger image */
+    height: 400px;
+  }
+
+  /* Increase intro text sizes */
+  .intro h1 {
+    font-size: 3.5rem;
+  }
+
+  .intro h2 {
+    font-size: 2.2rem;
+  }
+
+  .intro p {
+    font-size: 1.1rem;
+  }
+
+  /* Increase button padding and font size */
+  .btn {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+  }
+}
+
+/* ------------------- Intro Text ------------------- */
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.intro h2 {
+  color: #FFE031;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  color: #666;
+  max-width: 660px;
+  margin-bottom: 30px;
+}
+
+.intro p a {
+  color: inherit;           /* makes link text use normal text color */
+  text-decoration: none;    /* removes underline */
+  font-weight: 600;         /* makes it slightly bold */
+  cursor: pointer;          /* keeps pointer on hover to show it’s clickable */
+}
+
+/* Optional: subtle hover effect to show it’s a link */
+.intro p a:hover {
+  text-decoration: underline;
+  color: #FFE031;           /* or any highlight color you want */
+}
+
+
+/* ------------------- Button ------------------- */
+.btn {
+  display: inline-block;
+  background-color: #FFE031;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* ------------------- Profile Image ------------------- */
+.profile-img {
+  margin-top: 40px;
+}
+
+.profile-img img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #FFE031;
+}
+
+/* ------------------- Social Media Icons ------------------- */
+.social-media {
+  margin-top: 20px;   /* increase top space */
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.social-icons {
+  display: inline-flex;
+  gap: 35px;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 32px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #FFE031;
+}
+
+/* ------------------- Footer ------------------- */
+.footer {
+  text-align: center;
+  padding: 30px;
+}
