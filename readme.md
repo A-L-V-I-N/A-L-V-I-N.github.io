@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website!  
 This site showcases my professional background, skillset, and projects as an **Automotive Embedded Engineer**.
 
-🔗 **Live Site**: [a-l-v-i-n.github.io](https://a-l-v-i-n.github.io/)
+🔗 **Live Site**: [alvinantonyms.github.io](https://alvinantonyms.github.io/)
 
 ## 🔧 Built With
 - HTML5
