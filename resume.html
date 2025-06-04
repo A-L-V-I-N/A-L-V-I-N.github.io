@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume - Terminal View</title>
+  <link rel="stylesheet" href="resume.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Original header from index.html -->
+  <header class="header">
+    <div class="logo">Alvin Antony MS</div>
+    <nav class="nav">
+      <a href="index.html">Portfolio</a>
+      <a href="career.html">Career</a>
+      <a href="skills.html">Skillset</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Terminal Resume Section -->
+  <main class="resume-container">
+    <div class="terminal">
+      <div class="title-bar">
+        <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+      </div>
+      <div id="resume-text"></div><span class="cursor"></span>
+    </div>
+  </main>
+
+  <script>
+    const resumeContent = `
+alvin@ubuntu:~$ cat resume.txt
+
+Name: Alvin Antony MS
+Title: Automotive Embedded Engineer
+
+Summary:
+Experienced embedded software developer with a strong background in automotive systems, safety-critical development, and real-time systems. 
+
+Experience:
+- Mercedes-Benz R&D India – Embedded Engineer
+- Tata Elxsi Ltd. – Automotive Software Developer
+
+Skills:
+- Embedded C, Autosar, CAN, UDS
+- RTOS, Microcontrollers, Debugging tools
+- Git, Jira, Vector CANoe
+
+Education:
+B.Tech in Electrical and Electronics Engineering
+
+Links:
+Portfolio: alvinantonyms.github.io
+LinkedIn: linkedin.com/in/alvin-antony-m-s
+
+alvin@ubuntu:~$ _
+`;
+
+    const textEl = document.getElementById('resume-text');
+    let i = 0;
+
+    function typeEffect() {
+      if (i < resumeContent.length) {
+        textEl.innerHTML += resumeContent[i] === '\n' ? '<br>' : resumeContent[i];
+        i++;
+        setTimeout(typeEffect, 20);
+      }
+    }
+
+    typeEffect();
+  </script>
+</body>
+</html>

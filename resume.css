@@ -1,0 +1,69 @@
+/* Resume Terminal Page Styling */
+body {
+  margin: 0;
+  background-color: #FFE031;
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+}
+
+/* Padding only for main content, not header */
+.resume-container {
+  padding: 20px;
+}
+
+/* Terminal Styles */
+.terminal {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #300A24;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+.title-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot.red { background-color: #FF605C; }
+.dot.yellow { background-color: #FFBD44; }
+.dot.green { background-color: #00CA4E; }
+
+#resume-text {
+  white-space: pre-wrap;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  background: #ffffff;
+  animation: blink 1s step-start infinite;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Responsive Padding */
+@media (max-width: 768px) {
+  .resume-container {
+    padding: 16px;
+  }
+
+  .terminal {
+    padding: 16px;
+    margin: 20px 0;
+  }
+}
