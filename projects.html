@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alvin | Projects</title>
+  <link rel="stylesheet" href="projects.css" />
+  <script src="//code.iconify.design/1/1.0.6/iconify.min.js"></script>
+  <link rel="icon" href="Profile.png" type="image/jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">Alvin Antony MS</div>
+    <nav class="nav">
+      <a href="index.html">Portfolio</a>
+      <a href="career.html">Career</a>
+      <a href="skills.html">Skillset</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="projects">
+    <h2>My Projects</h2>
+    <div class="project-cards" id="projectCards">
+      <div class="card">
+        <span class="iconify" data-icon="mdi:chip" data-inline="false"></span>
+        <h3>Automatic Synchronizer</h3>
+        <p>Arduino-based solution for synchronizing microgrids to the main grid automatically.</p>
+        <div class="tags"><span>Arduino</span><span>Microgrids</span><span>Power</span></div>
+      </div>
+
+      <div class="card">
+        <span class="iconify" data-icon="mdi:car-light-high" data-inline="false"></span>
+        <h3>Adaptive Drive Beam</h3>
+        <p>System that adjusts car headlamp beams based on incoming traffic to improve safety.</p>
+        <div class="tags"><span>IPC</span><span>SOMEIP</span><span>AUTOSAR</span></div>
+      </div>
+
+      <div class="card">
+        <span class="iconify" data-icon="mdi:face-recognition" data-inline="false"></span>
+        <h3>Driver Monitoring</h3>
+        <p>Vision-based embedded system to detect drowsiness and ensure alertness.</p>
+        <div class="tags"><span>Camera</span><span>Embedded</span><span>Alert System</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+  </footer>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+
+    function shuffleCards() {
+      cards.forEach(card => {
+        const randomX = (Math.random() - 0.5) * 300; // +/-100px
+        const randomY = (Math.random() - 0.5) * 300;
+        card.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${Math.random() * 20 - 10}deg)`;
+      });
+
+      setTimeout(() => {
+        cards.forEach(card => {
+          card.style.transform = `translate(0, 0) rotate(0deg)`;
+        });
+      }, 700);
+    }
+
+    window.addEventListener('load', shuffleCards);
+  </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* --------- Global Styles --------- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* --------- Header --------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  align-items: center;
+  background: white;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+
+.nav a.active {
+  color: #FFE031;
+}
+
+/* --------- Projects Section --------- */
+.projects {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.project-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+@media(min-width: 768px) {
+  .project-cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 300px;
+  transition: transform 1s ease-in-out;
+}
+
+.card .iconify {
+  font-size: 48px;
+  color: #FFE031;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 15px 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tags span {
+  background: #FFE031;
+  color: white;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* --------- Footer --------- */
+.footer {
+  text-align: center;
+  padding: 30px;
+}
